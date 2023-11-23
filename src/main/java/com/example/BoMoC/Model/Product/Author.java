@@ -1,10 +1,20 @@
 package com.example.BoMoC.Model.Product;
 
+import lombok.Data;
+
+import javax.persistence.*;
+import java.util.List;
+
+@Entity
+@Data
 public class Author {
-	private int _id;
-	private String _name;
-	private boolean _gender;
-	private String _country;
-	private String _image;
-	public Book _unnamed_Book_;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int ID;
+	private String name;
+	private boolean gender;
+	private String country;
+	private String image;
+	@OneToMany(mappedBy = "author")
+	public List<Book> book;
 }
