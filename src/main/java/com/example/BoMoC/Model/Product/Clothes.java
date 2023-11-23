@@ -1,19 +1,33 @@
 package com.example.BoMoC.Model.Product;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Clothes extends Product {
-	private Manufacturer _manufacturer;
-	private String _name;
-	private String _size;
-	private String _color;
-	private Brand _brand;
-	public Brand _unnamed_Brand_;
-	public Manufacturer _unnamed_Manufacturer_;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int ID;
+	private String name;
+	private String size;
+	private String color;
 
-	public void add(Object aClothes) {
-		throw new UnsupportedOperationException();
-	}
 
-	public void update(Object aClothes) {
-		throw new UnsupportedOperationException();
-	}
+	@ManyToOne
+	@JoinColumn(name = "brand_id")
+	private Brand brand;
+
+
+	@ManyToOne
+	@JoinColumn(name = "manufacturer_id")
+	private Manufacturer manufacturer;
+
 }

@@ -1,7 +1,17 @@
 package com.example.BoMoC.Model.Product;
 
+import lombok.Data;
+
+import javax.persistence.*;
+import java.util.List;
+
+@Entity
+@Data
 public class Publisher {
-	private int _id;
-	private String _name;
-	public Book _unnamed_Book_;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int ID;
+	private String name;
+	@OneToMany(mappedBy = "publisher")
+	public List<Book> book;
 }
