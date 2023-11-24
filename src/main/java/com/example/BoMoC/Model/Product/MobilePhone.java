@@ -11,8 +11,7 @@ import javax.persistence.ManyToOne;
 
 @Entity
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
+
 public class MobilePhone extends Product {
 	@Id
 	private int ID;

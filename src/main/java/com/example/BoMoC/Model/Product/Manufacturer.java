@@ -7,6 +7,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
+@Data
 public class Manufacturer {
 	@Id
 	private int id;

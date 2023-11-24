@@ -1,8 +1,17 @@
 package com.example.BoMoC.Model.Product;
 
+import lombok.Data;
+
+import javax.persistence.*;
+
+@Entity
+@Data
 public class Star {
-	private int _id;
-	private int _amount;
-	private String _description;
-	public CustomerRating _unnamed_CustomerRating_;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	private int amount;
+	private String description;
+	@OneToOne
+	public CustomerRating customerRating;
 }

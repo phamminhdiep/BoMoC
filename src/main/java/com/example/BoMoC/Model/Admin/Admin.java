@@ -2,8 +2,13 @@ package com.example.BoMoC.Model.Admin;
 
 
 import com.example.BoMoC.Model.User.User;
+import lombok.Data;
 
+import javax.persistence.Entity;
+
+@Entity
+@Data
 public class Admin extends User {
-	private String _role;
-	private String _permission;
+	private String role;
+	private String permission;
 }

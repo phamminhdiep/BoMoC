@@ -1,14 +1,12 @@
 package com.example.BoMoC.Model.Product;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
-
+@Data
 public class Brand {
 	@Id
 	private int ID;
