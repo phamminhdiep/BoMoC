@@ -9,13 +9,13 @@ import java.util.Optional;
 @Service
 public interface ClothesDao {
 
-	public Clothes update(Integer id, Clothes clothes);
+    Clothes update(Integer id, Clothes clothes);
 
-	public Clothes add(Clothes clothes);
+    Clothes add(Clothes clothes);
 
-	public Optional<Clothes> getOne(Integer id);
+    Optional<Clothes> getOne(Integer id);
 
-	public List<Clothes> getAll();
+    List<Clothes> getAll();
 
-	public void delete(Integer id);
+    void delete(Integer id);
 }

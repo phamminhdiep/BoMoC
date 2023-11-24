@@ -1,11 +1,19 @@
 package com.example.BoMoC.Model.Order;
 
+import lombok.Data;
+
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
+@Data
 public class Shipment {
-	private int _id;
-	private String _method;
-	private int _fee;
-	private Date _shippingDate;
-	public Order _unnamed_Order_;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	private String method;
+	private int fee;
+	private Date shippingDate;
+	@OneToOne
+	private Order order;
 }

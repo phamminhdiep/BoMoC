@@ -13,8 +13,6 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Book extends Product {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String bookName;
 
 	@ManyToOne(cascade = CascadeType.ALL)
@@ -26,4 +24,5 @@ public class Book extends Product {
 	private Publisher publisher;
 	private Date publicationTime;
 	private String language;
+
 }

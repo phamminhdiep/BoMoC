@@ -1,15 +1,25 @@
 package com.example.BoMoC.Model.Product;
 
 import com.example.BoMoC.Model.Customer.Customer;
+import lombok.Data;
 
+import javax.persistence.*;
+import java.util.List;
+
+@Entity
+@Data
 public class CustomerRating {
-	private int _id;
-	private Star _star;
-	private Comment _comment;
-	private Customer _customer;
-	private Product _product;
-	public Star _unnamed_Star_;
-	public Comment _unnamed_Comment_;
-	public Product _unnamed_Product_;
-	public Customer _unnamed_Customer_;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int ID;
+	@OneToOne
+	private Star star;
+	@OneToOne
+	private Comment comment;
+	@OneToOne
+	private Customer customer;
+
+	@ManyToOne
+	private Product product;
+
 }

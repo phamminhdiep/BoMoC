@@ -1,8 +1,18 @@
 package com.example.BoMoC.Model.Order;
 
+import lombok.Data;
+
+import javax.persistence.*;
+
+@Entity
+@Data
 public class Payment {
-	private int _id;
-	private String _method;
-	private int _totalBill;
-	public Order _unnamed_Order_;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	private String method;
+	private int totalBill;
+
+	@OneToOne
+	private Order order;
 }

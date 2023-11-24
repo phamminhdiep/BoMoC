@@ -11,9 +11,6 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Clothes extends Product {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int ID;
     private String name;
     private String size;
     private String color;
@@ -25,5 +22,4 @@ public class Clothes extends Product {
     @ManyToOne
     @JoinColumn(name = "manufacturer_id")
     private Manufacturer manufacturer;
-
 }
