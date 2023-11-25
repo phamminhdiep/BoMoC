@@ -4,14 +4,12 @@ import com.example.BoMoC.Model.User.Account;
 import com.example.BoMoC.Model.User.Address;
 import com.example.BoMoC.Model.User.FullName;
 import com.example.BoMoC.Model.User.User;
-import com.example.BoMoC.utils.ApiResponse;
-import org.springframework.http.ResponseEntity;
 
 public interface UserDao {
 
 	public void changePass(Object aPassword);
 
-	public ResponseEntity<Object> login(Account account);
+	public Account login(Account account);
 
 	public FullName getName();
 
@@ -21,5 +19,6 @@ public interface UserDao {
 
 	public void ChangeProfile(Object aUser);
 
-	public ResponseEntity<Object> register(User user);
+	public User register(User user);
+
 }
