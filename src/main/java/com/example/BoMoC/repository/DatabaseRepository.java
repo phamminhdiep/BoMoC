@@ -24,6 +24,7 @@ public class DatabaseRepository {
             Class.forName(getJDBC_DRIVER());
             connection = DriverManager.getConnection(getDB_URL(), getUSER(), getPASS());
             System.out.println("Connect Database Mysql Successfully");
+            System.out.println("hello");
             return connection;
         } catch (Exception e) {
             return (Connection) e;
