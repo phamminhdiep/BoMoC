@@ -1,10 +1,19 @@
 package com.example.BoMoC.controller.ProductDao.CommentDao;
 
+import com.example.BoMoC.Model.Product.Comment;
+
+import java.util.List;
+import java.util.Optional;
+
 public interface CommentDao {
 
-	public void add(Object aComment);
+	public Comment add(Comment comment);
 
-	public void delete(Object aId);
+	public void delete(int id);
 
-	public void update(Object aComment);
+	public Comment update(Comment comment, int id);
+
+	public Optional<Comment> getOne(int id);
+
+	public List<Comment> getAll();
 }

@@ -8,7 +8,6 @@ import java.util.List;
 @Entity
 @Data
 public class Category {
-
 	@Id
 	private int ID;
 	private String productType;
