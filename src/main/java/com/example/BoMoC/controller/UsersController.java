@@ -1,10 +1,9 @@
 package com.example.BoMoC.controller;
 
-import com.example.BoMoC.Model.Product.Clothes;
-import com.example.BoMoC.Model.User.Account;
-import com.example.BoMoC.Model.User.User;
-import com.example.BoMoC.controller.UserDao.UserDao;
-import com.example.BoMoC.controller.UserDao.UserImplement;
+import com.example.BoMoC.model.user.Account;
+import com.example.BoMoC.model.user.User;
+import com.example.BoMoC.dao.userdao.UserDao;
+import com.example.BoMoC.dao.userdao.UserImplement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

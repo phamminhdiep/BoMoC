@@ -1,6 +1,6 @@
 package com.example.BoMoC.repository;
 
-import com.example.BoMoC.Model.User.User;
+import com.example.BoMoC.model.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

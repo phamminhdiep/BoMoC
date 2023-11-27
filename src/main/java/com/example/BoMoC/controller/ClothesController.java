@@ -1,7 +1,7 @@
 package com.example.BoMoC.controller;
 
-import com.example.BoMoC.Model.Product.Clothes;
-import com.example.BoMoC.controller.ProductDao.ClothesDao.ClothesDao;
+import com.example.BoMoC.dao.productdao.clothesdao.ClothesDao;
+import com.example.BoMoC.model.product.Clothes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,13 +13,13 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/clothes")
 public class ClothesController {
+    private ClothesDao clothesDao;
 
     @Autowired
     public ClothesController(ClothesDao clothesDao) {
         this.clothesDao = clothesDao;
     }
 
-    private ClothesDao clothesDao;
 
     @GetMapping
     public ResponseEntity<List<Clothes>> getAll() {
@@ -34,6 +34,15 @@ public class ClothesController {
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
+    @GetMapping("/search")
+    public ResponseEntity<List<Clothes>> getPersonsByKeyword(@RequestParam String keyword) {
+        List<Clothes> clothesList = clothesDao.findByNameWithKeyword(keyword);
+        if (clothesList.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(clothesList, HttpStatus.OK);
+    }
+
     @PostMapping
     public ResponseEntity<Clothes> add(@RequestBody Clothes clothes) {
         Clothes savedClothes = clothesDao.add(clothes);
@@ -41,7 +50,7 @@ public class ClothesController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Clothes> update(@PathVariable Integer id, @RequestBody Clothes clothes){
+    public ResponseEntity<Clothes> update(@PathVariable Integer id, @RequestBody Clothes clothes) {
         return new ResponseEntity<>(clothesDao.update(id, clothes), HttpStatus.OK);
     }
 
