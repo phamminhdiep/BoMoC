@@ -1,4 +1,4 @@
-package com.example.BoMoC.Model.User;
+package com.example.BoMoC.model.user;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;

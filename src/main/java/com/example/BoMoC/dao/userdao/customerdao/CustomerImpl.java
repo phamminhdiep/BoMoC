@@ -1,6 +1,6 @@
-package com.example.BoMoC.controller.UserDao.CustomerDAO;
+package com.example.BoMoC.dao.userdao.customerdao;
 
-import com.example.BoMoC.model.Customer.Customer;
+import com.example.BoMoC.model.customer.Customer;
 
 public class CustomerImpl implements CustomerDao {
 

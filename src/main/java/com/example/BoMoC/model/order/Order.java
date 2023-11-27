@@ -1,8 +1,7 @@
-package com.example.BoMoC.Model.Order;
+package com.example.BoMoC.model.order;
 
-
-import com.example.BoMoC.Model.Cart.Cart;
-import com.example.BoMoC.Model.Customer.Customer;
+import com.example.BoMoC.model.cart.Cart;
+import com.example.BoMoC.model.customer.Customer;
 import lombok.Data;
 
 import javax.persistence.*;

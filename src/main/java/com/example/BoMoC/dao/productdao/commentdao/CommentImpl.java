@@ -1,4 +1,4 @@
-package com.example.BoMoC.controller.ProductDao.CommentDao;
+package com.example.BoMoC.dao.productdao.commentdao;
 
 public class CommentImpl implements CommentDao {
 

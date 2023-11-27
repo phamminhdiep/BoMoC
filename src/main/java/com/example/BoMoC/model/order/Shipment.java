@@ -1,4 +1,4 @@
-package com.example.BoMoC.Model.Order;
+package com.example.BoMoC.model.order;
 
 import lombok.Data;
 

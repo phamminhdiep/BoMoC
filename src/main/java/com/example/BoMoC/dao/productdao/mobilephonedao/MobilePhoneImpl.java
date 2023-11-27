@@ -1,4 +1,4 @@
-package com.example.BoMoC.controller.ProductDao.MobilePhoneDao;
+package com.example.BoMoC.dao.productdao.mobilephonedao;
 
 public class MobilePhoneImpl implements MobilePhoneDao {
 

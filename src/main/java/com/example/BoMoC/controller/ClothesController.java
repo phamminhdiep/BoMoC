@@ -1,7 +1,7 @@
 package com.example.BoMoC.controller;
 
-import com.example.BoMoC.Model.Product.Clothes;
-import com.example.BoMoC.controller.ProductDao.ClothesDao.ClothesDao;
+import com.example.BoMoC.model.product.Clothes;
+import com.example.BoMoC.dao.productdao.clothesdao.ClothesDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

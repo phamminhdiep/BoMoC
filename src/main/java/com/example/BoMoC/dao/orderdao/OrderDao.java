@@ -1,6 +1,6 @@
-package com.example.BoMoC.controller.OrderDao;
+package com.example.BoMoC.dao.orderdao;
 
-import com.example.BoMoC.model.Customer.Customer;
+import com.example.BoMoC.model.customer.Customer;
 
 public interface OrderDao {
 

@@ -1,6 +1,5 @@
-package com.example.BoMoC.Model.Product;
+package com.example.BoMoC.model.product;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

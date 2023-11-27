@@ -1,7 +1,7 @@
-package com.example.BoMoC.Model.Admin;
+package com.example.BoMoC.model.admin;
 
 
-import com.example.BoMoC.Model.User.User;
+import com.example.BoMoC.model.user.User;
 import lombok.Data;
 
 import javax.persistence.Entity;

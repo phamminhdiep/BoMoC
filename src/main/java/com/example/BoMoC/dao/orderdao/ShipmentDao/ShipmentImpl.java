@@ -1,4 +1,4 @@
-package com.example.BoMoC.controller.OrderDao.ShipmentDao;
+package com.example.BoMoC.dao.orderdao.ShipmentDao;
 
 public class ShipmentImpl implements ShipmentDao {
 

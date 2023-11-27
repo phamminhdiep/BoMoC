@@ -1,8 +1,8 @@
-package com.example.BoMoC.Model.Cart;
+package com.example.BoMoC.model.cart;
 
-import com.example.BoMoC.Model.Customer.Customer;
-import com.example.BoMoC.Model.Order.Order;
-import com.example.BoMoC.Model.Product.Product;
+import com.example.BoMoC.model.customer.Customer;
+import com.example.BoMoC.model.order.Order;
+import com.example.BoMoC.model.product.Product;
 import lombok.Data;
 
 import javax.persistence.Entity;

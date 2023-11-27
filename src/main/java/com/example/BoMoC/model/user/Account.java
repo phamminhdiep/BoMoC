@@ -1,5 +1,5 @@
-package com.example.BoMoC.Model.User;
-import com.example.BoMoC.Model.User.User;
+package com.example.BoMoC.model.user;
+
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.Data;

@@ -1,7 +1,7 @@
-package com.example.BoMoC.controller.ProductDao;
+package com.example.BoMoC.dao.productdao;
 
 
-import com.example.BoMoC.model.Product.CustomerRating;
+import com.example.BoMoC.model.product.CustomerRating;
 
 public interface ProductDAO {
 

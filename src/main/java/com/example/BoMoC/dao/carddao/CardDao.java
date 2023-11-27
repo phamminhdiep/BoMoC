@@ -1,4 +1,4 @@
-package com.example.BoMoC.controller.CardDao;
+package com.example.BoMoC.dao.carddao;
 
 public interface CardDao {
 

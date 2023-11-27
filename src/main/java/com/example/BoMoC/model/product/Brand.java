@@ -1,4 +1,4 @@
-package com.example.BoMoC.Model.Product;
+package com.example.BoMoC.model.product;
 
 import lombok.Data;
 

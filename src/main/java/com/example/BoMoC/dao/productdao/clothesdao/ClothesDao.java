@@ -1,6 +1,6 @@
-package com.example.BoMoC.controller.ProductDao.ClothesDao;
+package com.example.BoMoC.dao.productdao.clothesdao;
 
-import com.example.BoMoC.model.Product.Clothes;
+import com.example.BoMoC.model.product.Clothes;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

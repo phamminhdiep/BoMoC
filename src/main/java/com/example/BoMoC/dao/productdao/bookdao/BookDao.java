@@ -1,4 +1,4 @@
-package com.example.BoMoC.controller.ProductDao.BookDao;
+package com.example.BoMoC.dao.productdao.bookdao;
 
 public interface BookDao {
 

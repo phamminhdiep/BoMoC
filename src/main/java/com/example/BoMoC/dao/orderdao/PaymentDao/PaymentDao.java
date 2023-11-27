@@ -1,4 +1,4 @@
-package com.example.BoMoC.controller.OrderDao.PaymentDao;
+package com.example.BoMoC.dao.orderdao.PaymentDao;
 
 public interface PaymentDao {
 

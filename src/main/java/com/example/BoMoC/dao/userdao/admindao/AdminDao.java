@@ -1,6 +1,6 @@
-package com.example.BoMoC.controller.UserDao.AdminDao;
+package com.example.BoMoC.dao.userdao.admindao;
 
-import com.example.BoMoC.model.Admin.Admin;
+import com.example.BoMoC.model.admin.Admin;
 
 public interface AdminDao {
 

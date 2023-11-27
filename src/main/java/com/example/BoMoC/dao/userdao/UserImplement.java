@@ -1,9 +1,9 @@
-package com.example.BoMoC.controller.UserDao;
+package com.example.BoMoC.dao.userdao;
 
-import com.example.BoMoC.model.User.Account;
-import com.example.BoMoC.model.User.Address;
-import com.example.BoMoC.model.User.FullName;
-import com.example.BoMoC.model.User.User;
+import com.example.BoMoC.model.user.Account;
+import com.example.BoMoC.model.user.Address;
+import com.example.BoMoC.model.user.FullName;
+import com.example.BoMoC.model.user.User;
 import com.example.BoMoC.repository.*;
 import org.springframework.web.bind.annotation.*;
 
