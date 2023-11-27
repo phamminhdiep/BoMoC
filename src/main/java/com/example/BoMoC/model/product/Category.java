@@ -8,20 +8,20 @@ import javax.persistence.*;
 import java.util.List;
 
 @JsonIdentityInfo(
-		generator = ObjectIdGenerators.PropertyGenerator.class,
-		property = "id")
+        generator = ObjectIdGenerators.PropertyGenerator.class,
+        property = "id")
 @Entity
 @Data
 public class Category {
 
-	@Id
-	private int ID;
-	private String productType;
+    @Id
+    private int ID;
+    private String productType;
 
-	@OneToMany(mappedBy = "category",fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	private List<Product> product;
+    @OneToMany(mappedBy = "category",fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Product> product;
 
-	public List<Product> getProduct() {
-		return null;
-	}
+    public List<Product> getProduct() {
+        return null;
+    }
 }
