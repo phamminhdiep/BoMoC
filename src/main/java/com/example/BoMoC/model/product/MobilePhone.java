@@ -3,7 +3,6 @@ package com.example.BoMoC.model.product;
 import lombok.Data;
 
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
@@ -11,8 +10,6 @@ import javax.persistence.ManyToOne;
 @Data
 
 public class MobilePhone extends Product {
-    @Id
-    private int ID;
     private String name;
     @ManyToOne
     @JoinColumn(name = "brand_id")

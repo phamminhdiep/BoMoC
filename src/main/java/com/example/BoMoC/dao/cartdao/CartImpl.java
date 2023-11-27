@@ -1,6 +1,6 @@
-package com.example.BoMoC.dao.carddao;
+package com.example.BoMoC.dao.cartdao;
 
-public class CardImpl implements CardDao {
+public class CartImpl implements CartDao {
 
 	public void removeProduct(Object aProduct) {
 		throw new UnsupportedOperationException();

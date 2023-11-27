@@ -1,10 +1,12 @@
 package com.example.BoMoC.model.product;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -12,15 +14,17 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Book extends Product {
-	private String bookName;
+	private String title;
 
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne
 	@JoinColumn(name = "author_id")
 	private Author author;
 
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne
 	@JoinColumn(name = "publisher_id")
 	private Publisher publisher;
+
+	@JsonFormat(pattern = "dd/MM/yyyy")
 	private Date publicationTime;
 	private String language;
 

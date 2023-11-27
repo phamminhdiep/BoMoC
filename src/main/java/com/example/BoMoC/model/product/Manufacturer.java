@@ -1,9 +1,12 @@
 package com.example.BoMoC.model.product;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.Data;
 
 import javax.persistence.*;
 import java.util.List;
+
 
 @Entity
 @Data
@@ -13,42 +16,18 @@ public class Manufacturer {
     private String name;
 
 
-    @OneToMany(mappedBy = "manufacturer", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "manufacturer",fetch = FetchType.LAZY , cascade = CascadeType.ALL)
     private List<Clothes> clothes;
 
 
-    @OneToMany(mappedBy = "manufacturer", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "manufacturer",fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<MobilePhone> mobilePhone;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public List<Clothes> getClothes() {
         return null;
     }
 
-    public void setClothes(List<Clothes> clothes) {
-        this.clothes = clothes;
-    }
-
     public List<MobilePhone> getMobilePhone() {
         return null;
-    }
-
-    public void setMobilePhone(List<MobilePhone> mobilePhone) {
-        this.mobilePhone = mobilePhone;
     }
 }

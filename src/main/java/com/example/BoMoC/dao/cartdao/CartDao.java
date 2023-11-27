@@ -1,6 +1,6 @@
-package com.example.BoMoC.dao.carddao;
+package com.example.BoMoC.dao.cartdao;
 
-public interface CardDao {
+public interface CartDao {
 
 	public void removeProduct(Object aProduct);
 

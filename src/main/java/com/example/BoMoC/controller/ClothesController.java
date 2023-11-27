@@ -2,6 +2,7 @@ package com.example.BoMoC.controller;
 
 import com.example.BoMoC.model.product.Clothes;
 import com.example.BoMoC.dao.productdao.clothesdao.ClothesDao;
+import com.example.BoMoC.model.product.MobilePhone;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,6 +33,15 @@ public class ClothesController {
         Optional<Clothes> clothes = clothesDao.getOne(id);
         return clothes.map(value -> new ResponseEntity<>(value, HttpStatus.OK))
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    }
+
+    @GetMapping("/search")
+    public ResponseEntity<List<Clothes>> getPersonsByKeyword(@RequestParam String keyword) {
+        List<Clothes> clothesList = clothesDao.findByNameWithKeyword(keyword);
+        if (clothesList.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(clothesList, HttpStatus.OK);
     }
 
     @PostMapping

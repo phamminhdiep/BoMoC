@@ -1,6 +1,7 @@
 package com.example.BoMoC.dao.productdao.clothesdao;
 
 import com.example.BoMoC.model.product.Clothes;
+import com.example.BoMoC.model.product.MobilePhone;
 import com.example.BoMoC.repository.ClothesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,5 +45,10 @@ public class ClothesImpl implements ClothesDao {
 	@Override
 	public void delete(Integer id) {
 		clothesRepository.deleteById(id);
+	}
+
+	@Override
+	public List<Clothes> findByNameWithKeyword(String keyword) {
+		return clothesRepository.findByNameContaining(keyword);
 	}
 }

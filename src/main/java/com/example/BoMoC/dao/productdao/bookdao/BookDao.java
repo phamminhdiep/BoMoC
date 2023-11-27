@@ -1,8 +1,21 @@
 package com.example.BoMoC.dao.productdao.bookdao;
 
+import com.example.BoMoC.model.product.Book;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
+@Service
 public interface BookDao {
+	Book update(Integer id, Book book);
 
-	public void add(Object aBook);
+	Book add(Book book);
 
-	public void update(Object aBook);
+	Optional<Book> getOne(Integer id);
+
+	List<Book> getAll();
+
+	void delete(Integer id);
+
+	List<Book> findByTitleWithKeyword(String keyword);
 }
