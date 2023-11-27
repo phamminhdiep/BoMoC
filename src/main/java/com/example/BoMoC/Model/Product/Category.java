@@ -14,6 +14,8 @@ public class Category {
 	private String productType;
 	private String name;
 
+	// hí anh em
+
 	@OneToMany(mappedBy = "category",fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List<Product> product;
 }
