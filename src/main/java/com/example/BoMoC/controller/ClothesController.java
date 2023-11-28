@@ -36,7 +36,7 @@ public class ClothesController {
     }
 
     @GetMapping("/search")
-    public ResponseEntity<List<Clothes>> getPersonsByKeyword(@RequestParam String keyword) {
+    public ResponseEntity<List<Clothes>> getByKeyword(@RequestParam String keyword) {
         List<Clothes> clothesList = clothesDao.findByNameWithKeyword(keyword);
         if (clothesList.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);

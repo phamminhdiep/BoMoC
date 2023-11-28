@@ -33,7 +33,7 @@ public class BookController {
     }
 
     @GetMapping("/search")
-    public ResponseEntity<List<Book>> getPersonsByKeyword(@RequestParam String keyword) {
+    public ResponseEntity<List<Book>> getByKeyword(@RequestParam String keyword) {
         List<Book> bookList = bookDao.findByTitleWithKeyword(keyword);
         if (bookList.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);

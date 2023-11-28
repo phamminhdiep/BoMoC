@@ -34,7 +34,7 @@ public class MobilePhoneController {
     }
 
     @GetMapping("/search")
-    public ResponseEntity<List<MobilePhone>> getPersonsByKeyword(@RequestParam String keyword) {
+    public ResponseEntity<List<MobilePhone>> getByKeyword(@RequestParam String keyword) {
         List<MobilePhone> mobilePhoneList = mobilePhoneDao.findByNameWithKeyword(keyword);
         if (mobilePhoneList.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
